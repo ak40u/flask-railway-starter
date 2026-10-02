@@ -11,8 +11,8 @@ a current gunicorn, an explicit bind, and a health check.
 |------|---------------|
 | `main.py` | The app: a landing page, `/api/info`, and `/health`. |
 | `gunicorn.conf.py` | Binds to `0.0.0.0:$PORT` in Python, so the start command needs no shell expansion. |
-| `requirements.txt` | `Flask~=3.1.3`, `gunicorn~=26.0.0` — patch updates, no surprise majors. |
-| `.python-version` | Pins Python 3.13 so a platform default bump can't change the runtime under you. |
+| `requirements.txt` | `Flask~=3.1.3`, `gunicorn~=26.2.0` — patch updates, no surprise majors. |
+| `.python-version` | Pins Python 3.14 so a platform default bump can't change the runtime under you. |
 | `railway.json` | Nixpacks build, `gunicorn main:app`, health check on `/health`. |
 
 ## Why the pins matter
